@@ -18,6 +18,8 @@ public class Q4_checker implements CommandLineRunner {
     @Transactional
     public void run(String... args) throws Exception {
 
+        //before calling this, make sure that data.sql values are inserted into the database.
+
         List<Module> modulesIncludedInCompleteRoutes = hibernateRepository.getModulesIncludedInCompleteRoutes(1l);
 
         System.out.println("Modules included in complete routes: " + modulesIncludedInCompleteRoutes);
